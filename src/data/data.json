@@ -1,0 +1,8 @@
+[
+    {"id": 1, "nameProduct": "PONTIAC FIREBIRD", "category": "Autos", "price": 10000, "stock": 10, "image":"", "description": "11 Cm De Largo"},
+    {"id": 2, "nameProduct": "CHEVROLET BEL AIR", "category": "Autos", "price": 5000, "stock": 5, "image":"", "description": "11 Cm De Largo"},
+    {"id": 3, "nameProduct": "SUBARU IMPREZA", "category": "Autos", "price": 10000, "stock": 10, "image":"", "description": "12 Cm De Largo"},
+    {"id": 4, "nameProduct": "DODGE CHARGER LUZ/SONIDO", "category": "Autos", "price": 5000, "stock": 5, "image":"", "description": "17 Cm De Largo"},
+    {"id": 5, "nameProduct": "FERRARI SF21", "category": "Autos", "price": 10000, "stock": 10, "image":"", "description": "12,5 Cm De Largo"},
+    {"id": 6, "nameProduct": "ALFA ROMEO", "category": "Autos", "price": 5000, "stock": 5, "image":"", "description": "16 Cm De Largo"}
+]
