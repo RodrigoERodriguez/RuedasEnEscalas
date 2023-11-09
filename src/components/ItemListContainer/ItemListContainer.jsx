@@ -14,7 +14,7 @@ const ItemListContainer = () => {
         pedirDatos()
             .then((res) => {
                 if (categoria){
-                    setproductos(res.filter((prod) => prod.category === categoria));
+                    setproductos(res.filter((prod) => prod.categoria === categoria));
                     setTitulo(categoria);
                 } else{
                     setproductos(res);

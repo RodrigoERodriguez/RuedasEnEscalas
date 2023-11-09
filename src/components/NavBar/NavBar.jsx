@@ -15,10 +15,10 @@ const NavBar = () => {
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                 <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
-                    <Link to="/productos/camiones">Camiones</Link>
-                    <Link to="/productos/camionetas">Camionetas</Link>
-                    <Link to="/productos/autos">Autos</Link>
-                    <Link to="/productos/accesorios">Accesorios</Link>
+                    <Link to="/productos/Camiones">Camiones</Link>
+                    <Link to="/productos/Camionetas">Camionetas</Link>
+                    <Link to="/productos/Autos">Autos</Link>
+                    <Link to="/productos/Accesorios">Accesorios</Link>
                 </Nav>
                 <Form className="d-flex">
                     <Form.Control
