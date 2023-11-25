@@ -21,7 +21,7 @@ const ItemDetail = ( {item} ) => {
     return (
         <div>
             <div>
-                {/* <img src= {item.imagen} alt= {item.nameProduct}/> */}
+                <img src= {item.image} alt= {item.nameProduct}/>
                 <div>
                     <h3>{item.nameProduct}</h3>
                     <p>{item.description}</p>
@@ -31,7 +31,8 @@ const ItemDetail = ( {item} ) => {
                         cantidad={cantidad}
                         handleSumar={handleSumar} 
                         handleRestar={handleRestar} 
-                        handleAgregar={() => {agregarAlCarrito(item,cantidad)}}/>
+                        handleAgregar={() => {agregarAlCarrito(item, cantidad) }}
+                    />
                 </div>
             </div>
         </div>

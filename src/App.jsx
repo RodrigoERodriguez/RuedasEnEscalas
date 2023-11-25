@@ -12,7 +12,7 @@ import Carrito from './components/Carrito/Carrito';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-
+  
   return (
     <CartProvider>
       <BrowserRouter>
@@ -30,6 +30,7 @@ function App() {
       </BrowserRouter>
     </CartProvider>
   )
+
 }
 
-export default App
+export default App;
