@@ -1,18 +1,20 @@
+import { doc, getDoc } from "firebase/firestore";
+import { baseDeDatos } from "../../FireBase/config";
 import { useEffect, useState } from "react";
-import { pedirItemPorId } from "../../helpers/pedirDatos";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
 
 const ItemDetailContainer = () => {
-
     const [item, setItem ] = useState(null);
     const id = useParams().id;
 
     useEffect(() => {
-        pedirItemPorId(Number(id))
-            .then((res) =>{
-                setItem(res);
+        const productoBaseDeDato = doc( baseDeDatos, "Productos", id ); 
+
+        getDoc(productoBaseDeDato)
+            .then((respuesta) => {
+                setItem({ ...respuesta.data(), id: respuesta.id });
             })
     }, [id])
     

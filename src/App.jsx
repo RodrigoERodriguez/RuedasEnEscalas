@@ -1,5 +1,6 @@
 //Librerias
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import CheckOut from './components/CheckOut/CheckOut';
 
 //Componentes
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/productos" element={<ItemListContainer />} />
           <Route path="/productos/:categoria" element={<ItemListContainer />} />
           <Route path="/carrito" element={<Carrito />} />
+          {/* <Route path="/checkout" element={<CheckOut />} /> */}
         </Routes>
 
       </BrowserRouter>
