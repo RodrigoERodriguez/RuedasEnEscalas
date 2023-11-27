@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import CartWidget from '../CarWidget/CartWidget';
+import FavWidget from '../FavWidget/FavWidget';
 
 const NavBar = () => {
     return (
@@ -32,6 +33,7 @@ const NavBar = () => {
 
                 <Nav>
                     <CartWidget/>
+                    <FavWidget />
                 </Nav>
             </Navbar.Collapse>
         </Container>

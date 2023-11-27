@@ -9,16 +9,35 @@ export const CartProvider = ({children}) =>{
     const [carrito, setCarrito] = useState(carritoInicial);
 
     const agregarAlCarrito = (item, cantidad) => {
+
+        if(item.stock < cantidad){
+            Swal.fire(
+                "Error",
+                "No hay suficiente stock disponible",
+                "error"
+            );
+
+            return;
+        }
+
         const itemAgregado = {...item, cantidad};
 
         const nuevoCarrito = [...carrito];
         const estaEnElCarrito = nuevoCarrito.find((producto) => producto.id === itemAgregado.id);
+
+        Swal.fire(
+            "Producto agregado con exito!",
+            "El producto fue agregado a tu carrito!",
+            "success"
+        );
 
         if (estaEnElCarrito){
             estaEnElCarrito.cantidad += cantidad;
         }else{
             nuevoCarrito.push(itemAgregado);
         }
+        
+        item.stock -= cantidad;
         setCarrito(nuevoCarrito);
     }
     

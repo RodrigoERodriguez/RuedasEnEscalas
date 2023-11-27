@@ -9,19 +9,22 @@ const ItemListContainer = () => {
     const [productos , setproductos] = useState([]);
     const [titulo, setTitulo] = useState("Productos");
     const categoria = useParams().categoria;
-    console.log(categoria);
 
     useEffect(() => {
         const productosBaseDeDatos = collection( baseDeDatos, "Productos" ); 
-
         const filtroCategoria = categoria ? query(productosBaseDeDatos, where("categoria", "==", categoria)) : productosBaseDeDatos;
 
         getDocs(filtroCategoria)
             .then((respuesta) => {
-                setproductos(respuesta.docs.map((doc) =>{
-                    return { ...doc.data(), id: doc.id };
-                }));
+
+                setproductos(
+                    respuesta.docs.map((doc) => {
+                        return { ...doc.data(), id: doc.id}
+                    })
+                )
+
             })
+
     }, [categoria])
     
 

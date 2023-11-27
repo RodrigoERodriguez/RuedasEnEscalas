@@ -1,17 +1,19 @@
 import { useContext, useState } from "react";
 import ItemCount from "../ItemCount/ItemCount"
 import { CartContext } from "../../context/CartContex/CartContex";
+import { FavContext } from "../../context/CartContex/FavContext";
 
 
 const ItemDetail = ( {item} ) => {
 
     const {carrito, agregarAlCarrito} = useContext(CartContext);
-    console.log(carrito);
+    const {favoritos, agregarAFavoritos } = useContext(FavContext);
 
     const [cantidad, setCantidad] = useState(1);
 
     const handleRestar = () => {
         cantidad > 1 && setCantidad(cantidad - 1)
+        
     }
 
     const handleSumar = () => {
@@ -27,11 +29,13 @@ const ItemDetail = ( {item} ) => {
                     <p>{item.description}</p>
                     <p>Categoria: {item.category}</p>
                     <p>${item.price}</p>
+                    <p>Stock disponible: {item.stock}</p>
                     <ItemCount
                         cantidad={cantidad}
                         handleSumar={handleSumar} 
                         handleRestar={handleRestar} 
-                        handleAgregar={() => {agregarAlCarrito(item, cantidad) }}
+                        handleAgregar={() => {agregarAlCarrito(item, cantidad)}}
+                        handleFavoritos={() => {agregarAFavoritos(item, cantidad)}}
                     />
                 </div>
             </div>
