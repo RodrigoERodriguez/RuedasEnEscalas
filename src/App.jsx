@@ -8,11 +8,11 @@ import NavBar from './components/NavBar/NavBar'
 import { CartProvider} from './context/CartContex/CartContex';
 import Carrito from './components/Carrito/Carrito';
 import Favoritos from './components/Favoritos/Favoritos';
+import { FavProvider } from './context/FavContext/FavContext';
 import CheckOut from './components/CheckOut/CheckOut';
 
 //Clases
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FavProvider } from './context/CartContex/FavContext';
 
 function App() {
   
