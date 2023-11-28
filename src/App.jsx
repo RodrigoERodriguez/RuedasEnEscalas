@@ -13,6 +13,7 @@ import CheckOut from './components/CheckOut/CheckOut';
 
 //Clases
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Pedidos from './components/Pedidos/Pedidos';
 
 function App() {
   
@@ -33,6 +34,7 @@ function App() {
             <Route path="/carrito" element={<Carrito />} />
             <Route path="/favoritos" element={<Favoritos />} />
             <Route path="/checkout" element={<CheckOut />} />
+            <Route path="/mispedidos" element={<Pedidos />} />
           </Routes>
 
         </BrowserRouter>

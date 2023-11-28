@@ -10,7 +10,7 @@ const NavBar = () => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
-            <Link to="/">TurboEscala</Link>
+            <Link to="/">RuedasEnEscalas</Link>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                 <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
@@ -18,8 +18,9 @@ const NavBar = () => {
                     <Link to="/productos/Camionetas">Camionetas</Link>
                     <Link to="/productos/Autos">Autos</Link>
                     <Link to="/productos/Accesorios">Accesorios</Link>
+                    <Link to="/mispedidos">Mis Pedidos</Link>
                 </Nav>
-
+                
                 <Nav>
                     <CartWidget/>
                     <FavWidget />
