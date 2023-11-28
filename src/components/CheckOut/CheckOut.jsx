@@ -72,7 +72,7 @@ const CheckOut = () => {
             <form className="formulario" onSubmit={handleSubmit(Compra)}>
             <input type="text" placeholder="Ingresá tu nombre" {...register('nombre', { required: true })} />
             <input type="email" placeholder="Ingresá tu e-mail" {...register('email', { required: true })} />
-            <input type="email" placeholder="Confirma tu e-mail" {...register('email', { required: true })} />
+            <input type="email" placeholder="Confirma tu e-mail" {...register('confirmEmail', { required: true })} />
             {errorEmail && <p>Los correos electrónicos no coinciden.</p>}
             <input type="phone" placeholder="Ingresá tu teléfono" {...register('telefono', { required: true })} />
             <button className="enviar" type="submit">

@@ -7,7 +7,7 @@ const Item = ( {producto} ) => {
             <img src={producto.image} className="card-img-top"/>
             <div className="card-body">
                 <p>Nombre: {producto.nameProduct}</p>
-                <p>Categoria: {producto.category}</p>
+                <p>Categoria: {producto.categoria}</p>
                 <p>Precio: ${producto.price}</p>
                 <Link to={`/item/${producto.id}`}>Ver Mas</Link>
             </div>
